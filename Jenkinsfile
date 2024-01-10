@@ -1,14 +1,12 @@
 pipeline {
     agent any
-    
-   
 
     stages {
         stage('Build') {
             steps {
                 script {
-                    // Install webpack locally without sudo
-                    sh 'npm install webpack --save-dev'
+                    // Install webpack and npx globally without sudo
+                    sh 'npm install -g webpack npx'
 
                     // Ensure execute permissions for webpack
                     sh 'chmod +x ./node_modules/.bin/webpack'
