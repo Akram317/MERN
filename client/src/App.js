@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>MERN Stack App</h1>
+      <h1> Captiosus Axons </h1>
       <p>{message}</p>
     </div>
   );
