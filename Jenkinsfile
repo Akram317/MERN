@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MONGODB_URI = 'your_mongodb_uri'
+        MONGODB_URI = 'localhost:27017'
         NODE_ENV = 'production'
     }
 
