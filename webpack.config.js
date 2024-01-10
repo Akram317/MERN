@@ -26,12 +26,13 @@ module.exports = {
       },
     ],
   },
-   resolve: {
-        alias: {
-            'webpack': path.resolve(__dirname, 'node_modules', 'webpack')
-        }
-    }
-node: {
-        fs: 'empty',
+  resolve: {
+    alias: {
+      'webpack': path.resolve(__dirname, 'node_modules', 'webpack')
     },
+  },
+  // Move the node configuration outside of the resolve section
+  node: {
+    fs: 'empty',
+  },
 };
