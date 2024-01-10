@@ -30,10 +30,9 @@ module.exports = {
     alias: {
       'webpack': path.resolve(__dirname, 'node_modules', 'webpack')
     },
-    // Move the node configuration here
-    // This resolves the syntax error you encountered
-    node: {
-      fs: 'empty',
-    },
+  },
+  // Move the node configuration outside of the resolve section
+  node: {
+    fs: 'empty',
   },
 };
