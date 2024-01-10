@@ -1,9 +1,7 @@
 pipeline {
     agent any
     
-    tools {
-        nodejs "your-nodejs-tool-label" // Specify the label or name of your Node.js tool installation
-    }
+   
 
     stages {
         stage('Build') {
