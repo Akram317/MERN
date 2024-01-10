@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Install webpack and npx globally without sudo
-                    sh 'npm install -g webpack npx'
+                    // Install webpack and npx locally without sudo
+                    sh 'npm install webpack npx'
 
                     // Ensure execute permissions for webpack
                     sh 'chmod +x ./node_modules/.bin/webpack'
