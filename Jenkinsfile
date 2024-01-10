@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        MONGODB_URI = 'mongodb://localhost:27017/mydb'
-        NODE_ENV = 'production'
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -13,27 +8,21 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
+        stage('Install and Build') {
             steps {
                 script {
-                    // Install server dependencies
-                    sh 'cd server && npm install'
+                    // Install dependencies and build server
+                    sh 'cd server && npm install && npm run build'
 
-                    // Install client dependencies
-                    sh 'cd client && npm install'
+                    // Install dependencies and build client
+                    sh 'cd client && npm install && npm run build'
                 }
             }
         }
 
-        stage('Build and Test') {
+        stage('Test') {
             steps {
                 script {
-                    // Build server
-                    sh 'cd server && npm run build'
-
-                    // Build client
-                    sh 'cd client && npm run build'
-
                     // Run tests if applicable
                     // sh 'cd server && npm test'
                 }
