@@ -31,8 +31,16 @@ module.exports = {
       'webpack': path.resolve(__dirname, 'node_modules', 'webpack')
     },
   },
+<<<<<<< HEAD
   // Move the node configuration outside of the resolve section
   node: {
     fs: 'empty',
+=======
+  // Only include valid properties in the node configuration
+  node: {
+    __dirname: false,
+    __filename: false,
+    global: false,
+>>>>>>> 8a1fcdfea06fc6105a479bd50a3abe53a307b30f
   },
 };
