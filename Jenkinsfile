@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MONGODB_URI = 'mongodb://127.0.0.1:27017/your_database_name'
+        MONGODB_URI = 'mongodb://127.0.0.1:27017/orders'
         NODE_ENV = 'production'
     }
 
