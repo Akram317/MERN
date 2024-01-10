@@ -6,7 +6,6 @@ pipeline {
     environment {
         PATH = "/usr/bin:$PATH"
         NODE_HOME = "/path/to/your/nodejs/installation" // Set the path to your Node.js installation
-        PATH = "$NODE_HOME/bin:$PATH"
     }
 
     stages {
