@@ -26,12 +26,14 @@ module.exports = {
       },
     ],
   },
-   resolve: {
-        alias: {
-            'webpack': path.resolve(__dirname, 'node_modules', 'webpack')
-        }
-    }
-node: {
-        fs: 'empty',
+  resolve: {
+    alias: {
+      'webpack': path.resolve(__dirname, 'node_modules', 'webpack')
     },
+    // Move the node configuration here
+    // This resolves the syntax error you encountered
+    node: {
+      fs: 'empty',
+    },
+  },
 };
