@@ -6,7 +6,7 @@
   "scripts": {
   "start": "node server.js",
   "test": "jest",
-  "build": "your-build-command-here"
+  "build": "npm run build"
 },
   "keywords": [],
   "author": "",
