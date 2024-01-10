@@ -15,7 +15,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-react'],
+            presets: [
+              ['@babel/preset-env', { targets: 'current node' }],
+              '@babel/preset-react',
+            ],
           },
         },
       },
@@ -27,7 +30,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'webpack': path.resolve(__dirname, 'node_modules', 'webpack')
+      'webpack': path.resolve(__dirname, 'node_modules', 'webpack'),
     },
   },
   // Only include valid properties in the node configuration
