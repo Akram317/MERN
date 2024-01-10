@@ -1,3 +1,5 @@
+// Jenkinsfile
+
 pipeline {
     agent any
 
@@ -5,8 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Install webpack globally
-                    sh 'npm install -g webpack'
+                    // Install webpack locally
+                    sh 'npm install webpack'
 
                     // Run npm install and npm run build
                     sh 'npm install'
