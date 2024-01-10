@@ -2,8 +2,12 @@ pipeline {
     agent any
 
     environment {
-        MONGODB_URI = 'mongodb://127.0.0.1:27017/orders'
+        MONGODB_URI = 'mongodb://localhost:27017/mydb'
         NODE_ENV = 'production'
+    }
+
+    tools {
+        nodejs 'YOUR_NODEJS_TOOL_NAME'
     }
 
     stages {
