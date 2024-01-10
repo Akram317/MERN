@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PATH = "/usr/bin:$PATH"
+        PATH = "/usr/local/bin:$PATH"
         NODE_HOME = "/path/to/your/nodejs/installation" // Set the path to your Node.js installation
         PATH = "$NODE_HOME/bin:$PATH"
     }
