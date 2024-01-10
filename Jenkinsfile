@@ -7,8 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Install webpack locally
-                    sh 'npm install webpack'
+                    // Install webpack globally using sudo
+                    sh 'sudo npm install -g webpack'
 
                     // Run npm install and npm run build
                     sh 'npm install'
