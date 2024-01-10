@@ -1,10 +1,8 @@
 pipeline {
     agent any
-
-    environment {
-        PATH = "/usr/local/bin:$PATH"
-        NODE_HOME = "/path/to/your/nodejs/installation" // Set the path to your Node.js installation
-        PATH = "$NODE_HOME/bin:$PATH"
+    
+    tools {
+        nodejs "your-nodejs-tool-label" // Specify the label or name of your Node.js tool installation
     }
 
     stages {
